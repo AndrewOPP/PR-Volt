@@ -28,7 +28,8 @@ const tasksSlice = createSlice({
       reducer(state, action) {
         state = state.map((elem) => {
           if (elem.id === action.payload.id) {
-            return (elem.completed = !elem.completed)
+            elem.completed = !elem.completed
+            return elem.completed
           }
           return elem
         })

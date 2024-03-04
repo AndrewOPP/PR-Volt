@@ -1,11 +1,18 @@
-import { Task } from 'components/Task/task'
+import React from 'react'
+import { Task } from '../Task/task.tsx'
 import { StyledList, StyledListItem } from './task-list.styled'
-import { selectAllTasks } from '../../redux/tasks/tasks-selectors.js'
+import { selectAllTasks } from '../../redux/tasks/tasks-selectors'
 import { useSelector } from 'react-redux'
-import { selectFilters } from '../../redux/filters/filters-selectors.js'
-import { statusFilters } from '../all-constants'
+import { selectFilters } from '../../redux/filters/filters-selectors'
+import { statusFilters } from '../all-constants.jsx'
 
-const getVisibleTasks = (tasks, statusFilter) => {
+type Task = {
+  id: string
+  text: string
+  completed: boolean
+}
+
+const getVisibleTasks = (tasks, statusFilter): Task[] => {
   switch (statusFilter) {
     case statusFilters.active: {
       return tasks.filter((task) => !task.completed)
@@ -19,17 +26,17 @@ const getVisibleTasks = (tasks, statusFilter) => {
   }
 }
 
-export const TaskList = () => {
+export const TaskList: React.FC = () => {
   const filter = useSelector(selectFilters)
   const tasks = useSelector(selectAllTasks)
   const visibleTasks = getVisibleTasks(tasks, filter)
   return (
     <StyledList>
-      {visibleTasks.map((task) => (
-        <StyledListItem key={task.id}>
+      {visibleTasks.map((task) => {
+        return <StyledListItem key={task.id}>
           <Task task={task} />
         </StyledListItem>
-      ))}
+      })},
     </StyledList>
   )
 }

@@ -1,6 +1,8 @@
+import React from 'react'
 import { useSelector } from 'react-redux'
-import { selectAllTasks } from '../../redux/tasks/tasks-selectors.js'
-export const TaskCounter = () => {
+import { selectAllTasks } from '../../redux/tasks/tasks-selectors'
+
+export const TaskCounter: React.FC = () => {
   const tasks = useSelector(selectAllTasks)
 
   const count = {
@@ -17,17 +19,6 @@ export const TaskCounter = () => {
     return task
   })
 
-  // const count = tasks.reduce(
-  //   (acc, task) => {
-  //     if (task.completed) {
-  //       acc.completed += 1
-  //     } else {
-  //       acc.active += 1
-  //     }
-  //     return acc
-  //   },
-  //   { 'active': 0, 'completed': 0 },
-  // )
   return (
     <div>
       <p className="text">Active: {count.active}</p>

@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "esModuleInterop": true,
+        "baseUrl": "src",
+        "noEmit": true,
+        "allowImportingTsExtensions": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "include": [
+        "src",
+        "src/components/all-constants.jsx"
+    ]
+}

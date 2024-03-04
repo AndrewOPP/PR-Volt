@@ -1,6 +1,13 @@
+import React, { FC } from 'react'
 import { StyledButton } from './button.styled'
 
-export const Button = ({
+type MyButtonProps = {
+  selected?: boolean
+  type?: string
+  children: React.ReactNode
+} & React.ButtonHTMLAttributes<HTMLButtonElement>
+
+export const Button: FC<MyButtonProps> = ({
   selected = false,
   type = 'button',
   children,

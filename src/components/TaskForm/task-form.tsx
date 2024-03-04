@@ -1,13 +1,14 @@
-import { Button } from 'components/Button/button'
+import React from 'react'
+import { Button } from '../Button/button'
 import { StyledForm, StyledInput } from './task-form.styled'
 import { addTask } from '../../redux/tasks/tasks-slice.js'
 import { useDispatch } from 'react-redux'
 import toast, { Toaster } from 'react-hot-toast'
 
-export const TaskForm = () => {
+export const TaskForm: React.FC = () => {
   const dispatch = useDispatch()
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event): void => {
     event.preventDefault()
     const form = event.target
     const taskTitle = form.elements.text.value

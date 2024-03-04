@@ -1,3 +1,4 @@
+import React from 'react'
 import { MdClose } from 'react-icons/md'
 import {
   StyledButton,
@@ -8,12 +9,20 @@ import {
 import { useDispatch } from 'react-redux'
 import { deleteTask, changeStatusTask } from '../../redux/tasks/tasks-slice.js'
 
-export const Task = ({ task }) => {
+type TaskProps = {
+  task: {
+    id: string
+    text: string
+    completed: boolean
+  }
+}
+
+export const Task: React.FC<TaskProps> = ({ task }) => {
   const dispatch = useDispatch()
 
-  const handleDelete = () => dispatch(deleteTask(task.id))
+  const handleDelete = (): void => dispatch(deleteTask(task.id))
 
-  const handleToggle = () => dispatch(changeStatusTask(task))
+  const handleToggle = (): void => dispatch(changeStatusTask(task))
 
   return (
     <StyledWrapper>

@@ -1,8 +1,9 @@
-import { TaskCounter } from 'components/TaskCounter/task-counter'
+import React from 'react'
+import { TaskCounter } from '../TaskCounter/task-counter.tsx'
 import { StyledSection, StyledTitle, StyledWrapper } from './task-bar.styled'
-import { StatusFilter } from 'components/StatusFilter/status-filter'
+import { StatusFilter } from '../StatusFilter/status-filter.tsx'
 
-export const TaskBar = () => {
+export const TaskBar: React.FC = () => {
   return (
     <StyledWrapper>
       <StyledSection>
