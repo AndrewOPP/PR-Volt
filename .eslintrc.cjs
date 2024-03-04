@@ -21,7 +21,7 @@ module.exports = {
   },
    overrides: [
     {
-      files: ['App.jsx'],
+      files: ['app.jsx'],
       rules: {
         'unicorn/filename-case': 'off',
       },
