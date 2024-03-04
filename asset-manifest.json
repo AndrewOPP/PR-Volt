@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PR-Volt-test-task/static/css/main.1a41d5e2.css",
-    "main.js": "/PR-Volt-test-task/static/js/main.3c86d883.js",
+    "main.js": "/PR-Volt-test-task/static/js/main.730f5951.js",
     "index.html": "/PR-Volt-test-task/index.html",
     "main.1a41d5e2.css.map": "/PR-Volt-test-task/static/css/main.1a41d5e2.css.map",
-    "main.3c86d883.js.map": "/PR-Volt-test-task/static/js/main.3c86d883.js.map"
+    "main.730f5951.js.map": "/PR-Volt-test-task/static/js/main.730f5951.js.map"
   },
   "entrypoints": [
     "static/css/main.1a41d5e2.css",
-    "static/js/main.3c86d883.js"
+    "static/js/main.730f5951.js"
   ]
 }
