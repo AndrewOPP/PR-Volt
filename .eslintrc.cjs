@@ -19,4 +19,12 @@ module.exports = {
     ],
     'react/prop-types': 'off',
   },
+   overrides: [
+    {
+      files: ['App.jsx'],
+      rules: {
+        'unicorn/filename-case': 'off',
+      },
+    },
+  ],
 };
